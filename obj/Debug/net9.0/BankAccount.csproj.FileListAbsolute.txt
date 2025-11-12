@@ -12,3 +12,4 @@
 /Users/james.henderson/_dev/kata-6-bank-account/BankAccount/obj/Debug/net9.0/BankAccount.pdb
 /Users/james.henderson/_dev/kata-6-bank-account/BankAccount/obj/Debug/net9.0/BankAccount.genruntimeconfig.cache
 /Users/james.henderson/_dev/kata-6-bank-account/BankAccount/obj/Debug/net9.0/ref/BankAccount.dll
+/Users/james.henderson/_dev/kata-6-bank-account/BankAccount/obj/Debug/net9.0/BankAccount.sourcelink.json
