@@ -7,7 +7,7 @@ public class BankAccount
     public BankAccount()
     {
         balance = 0;
-        InterestRate = 0.003m;
+        InterestRate = 0.03m;
     }
 
     public decimal CalculateInterest()
