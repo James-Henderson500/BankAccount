@@ -26,7 +26,7 @@ namespace BankAccountSystem
     {
         if (balance > 0)
         {
-            Console.WriteLine("Compunded Interest: £")
+                Console.WriteLine("Compounded Interest: £");
             return balance * (decimal)(Math.Pow((double)(1 + InterestRate), years) - 1);    
                 
         }
