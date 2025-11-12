@@ -17,6 +17,34 @@ namespace BankAccountSystem
         public decimal CalculateInterest()
         {
             if (balance > 0)
+            return balance * InterestRate;
+        }
+        return 0;
+    }
+    public decimal CalculateCompoundInterest(int years)
+    {
+        if (balance > 0 && years > 0)
+        {
+            return balance * (decimal)(Math.Pow((double)(1 + InterestRate), years));
+        }
+        return 0;
+    }
+    public void Deposit(decimal amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+        }
+        else
+        {
+            Console.WriteLine("Deposit amount must be positive.");
+        }
+    }
+    public void Withdraw(decimal amount)
+    {
+        if (amount > 0)
+        {
+            if (amount <= balance)
             {
                 return balance * InterestRate;
             }
