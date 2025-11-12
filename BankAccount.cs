@@ -6,28 +6,29 @@ namespace BankAccountSystem
     public class BankAccount
     {
         private decimal balance;
-        private decimal InterestRate;
+        private decimal interestRate;
 
         public BankAccount()
         {
             balance = 0;
-            InterestRate = 0.03m;
+            interestRate = 0.03m;
         }
 
         public decimal CalculateInterest()
         {
             if (balance > 0)
             {
-                return balance * InterestRate;
+                return balance * interestRate;
             }
             return 0;
         }
-    public decimal CompoundInterest(int years)
-    {
+        public decimal CompoundInterest(int years)
+         {
         if (balance > 0)
         {
-                Console.WriteLine("Compounded Interest: £");
-            return balance * (decimal)(Math.Pow((double)(1 + InterestRate), years) - 1);    
+                decimal compounded = balance * (decimal)(Math.Pow((double)(1 + interestRate), years) - 1);
+                Console.WriteLine($"Compounded Interest: £{compounded:F2}");
+                return compounded;   
                 
         }
         return 0;
