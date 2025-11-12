@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/james.henderson/.nuget/packages/": {}
+    "/Users/rowanloweho/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/james.henderson/_dev/kata-6-bank-account/BankAccount/BankAccount.csproj",
+      "projectUniqueName": "/Users/rowanloweho/Documents/Code/katas/BankAccount/BankAccount.csproj",
       "projectName": "BankAccount",
-      "projectPath": "/Users/james.henderson/_dev/kata-6-bank-account/BankAccount/BankAccount.csproj",
-      "packagesPath": "/Users/james.henderson/.nuget/packages/",
-      "outputPath": "/Users/james.henderson/_dev/kata-6-bank-account/BankAccount/obj/",
+      "projectPath": "/Users/rowanloweho/Documents/Code/katas/BankAccount/BankAccount.csproj",
+      "packagesPath": "/Users/rowanloweho/.nuget/packages/",
+      "outputPath": "/Users/rowanloweho/Documents/Code/katas/BankAccount/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/james.henderson/.nuget/NuGet/NuGet.Config"
+        "/Users/rowanloweho/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
