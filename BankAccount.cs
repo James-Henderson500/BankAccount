@@ -26,9 +26,9 @@ namespace BankAccountSystem
          {
         if (balance > 0)
         {
-                decimal compounded = balance * (decimal)(Math.Pow((double)(1 + interestRate), years) - 1);
-                Console.WriteLine($"Compounded Interest: £{compounded:F2}");
-                return compounded;   
+            decimal compounded = balance * (decimal)(Math.Pow((double)(1 + interestRate), years) - 1);
+            Console.WriteLine($"Compounded Interest: £{compounded:F2}");
+            return compounded;   
                 
         }
         return 0;
