@@ -28,8 +28,8 @@ class Program
         account.ApplyInterest();
         Console.WriteLine("Balance after applying interest: " + account.GetBalance());
 
-        account.PayInterest(3);
-        Console.WriteLine()
+        account.CompoundInterest(3);
+        Console.WriteLine();
 
 
         }

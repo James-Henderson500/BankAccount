@@ -22,12 +22,12 @@ namespace BankAccountSystem
             }
             return 0;
         }
-    public decimal PayInterest(int years)
+    public decimal CompoundInterest(int years)
     {
-        if (balance > 0 && years > 0)
+        if (balance > 0)
         {
-            return balance * (decimal)(Math.Pow((double)(1 + InterestRate), years));
-            Console.WriteLine("Balance with interest applied: £" +)
+            return balance * (decimal)(Math.Pow((double)(1 + InterestRate), years) - 1);    
+                
         }
         return 0;
     }
