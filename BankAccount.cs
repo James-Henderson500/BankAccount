@@ -2,12 +2,22 @@ using System;
 public class BankAccount
 {
     private decimal balance;
+    private decimal InterestRate;
 
     public BankAccount()
     {
         balance = 0;
+        InterestRate = 0.03m;
     }
 
+    public decimal CalculateInterest()
+    {
+        if (balance > 0)
+        {
+            return balance * InterestRate;
+        }
+        return 0;
+    }
     public void Deposit(decimal amount)
     {
         if (amount > 0)
@@ -33,6 +43,20 @@ public class BankAccount
             }
         }
     }
+    public void ApplyInterest()
+    {
+        decimal interestAmount = CalculateInterest();
+
+        if (interestAmount > 0)
+        {
+            balance += interestAmount;
+            Console.WriteLine("Interest applied: £" + interestAmount);
+        }
+        else
+        {
+            Console.WriteLine("No interest to apply.");
+        }
+    }       
 
         public decimal GetBalance()
         {

@@ -17,5 +17,9 @@ class Program
 
         account.Deposit(200);
         Console.WriteLine("Balance after depositing $200: " + account.GetBalance());
+
+        account.CalculateInterest();
+        account.ApplyInterest();  
+        Console.WriteLine("Balance after applying interest: " + account.GetBalance());
     }
 }
