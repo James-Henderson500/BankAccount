@@ -36,7 +36,7 @@ public class BankAccountTests
         var account = new BankAccount();
 
         // Act & Assert
-        Assert.Equal(0.03, account.InterestRate);
+        Assert.Equal(0.03m, account.InterestRate);
     }
 
     [Fact]
@@ -46,10 +46,10 @@ public class BankAccountTests
         var account = new BankAccount();
 
         // Act
-        account.SetInterestRate(0.10);
+        account.SetInterestRate(0.10m);
 
         // Assert
-        Assert.Equal(0.10, account.InterestRate);
+        Assert.Equal(0.10m, account.InterestRate);
     }
 
     [Fact]
@@ -58,7 +58,7 @@ public class BankAccountTests
         // Arrange
         var account = new BankAccount();
 
-        account.SetInterestRate(0.10);
+        account.SetInterestRate(0.10m);
         account.Deposit(10000);
         int years_to_pay = 1;
 
@@ -77,7 +77,7 @@ public class BankAccountTests
         // Arrange
         var account = new BankAccount();
         var expected_balance = 12100;
-        account.SetInterestRate(0.10);
+        account.SetInterestRate(0.10m);
         account.Deposit(10000);
         int years_to_pay = 2;
 
