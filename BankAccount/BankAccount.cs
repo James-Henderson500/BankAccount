@@ -1,13 +1,11 @@
 using System;
 
-
 namespace BankAccountSystem
 {
     public class BankAccount
     {
         private decimal balance;
         private decimal interestRate;
-
         public BankAccount()
         {
             balance = 0;
@@ -22,19 +20,30 @@ namespace BankAccountSystem
             }
             return 0;
         }
-        public decimal CompoundInterest(int years)
-         {
-        if (balance > 0)
+        public void ApplyCompoundInterestAnnually(int years)
         {
-            decimal compounded = balance * (decimal)(Math.Pow((double)(1 + interestRate), years) - 1);
-            Console.WriteLine($"Compounded Interest: £{compounded:F2}");
-            return compounded;   
-                
-        }
-        return 0;
-    }
-    public void Deposit(decimal amount)
-    {
+            if (balance > 0 && years > 0)
+            {
+                decimal originalBalance = balance;
+
+                for (int i = 1; i <= years; i++)
+                {
+                    decimal interestAmount = balance * interestRate;
+                    balance += interestAmount;
+                    Console.WriteLine($"Year {i}: Interest = £{interestAmount:F2}, Balance = £{balance:F2}");
+                }
+
+                decimal totalInterest = balance - originalBalance;
+                Console.WriteLine($"Total interest earned over {years} years: £{totalInterest:F2}");
+                Console.WriteLine($"Final balance: £{balance:F2}");
+            }
+            else
+            {
+                Console.WriteLine("No interest applied. Check balance and years.");
+            }
+        }    
+        public void Deposit(decimal amount)
+        {
         if (amount > 0)
         {
             balance += amount;
@@ -43,7 +52,7 @@ namespace BankAccountSystem
         {
             Console.WriteLine("Deposit amount must be positive.");
         }
-    }
+        }
         public void Withdraw(decimal amount)
         {
             if (amount > 0)
@@ -58,21 +67,6 @@ namespace BankAccountSystem
                 }
             }
         }
-        public void ApplyInterest()
-        {
-            decimal interestAmount = CalculateInterest();
-
-            if (interestAmount > 0)
-            {
-                balance += interestAmount;
-                Console.WriteLine("Interest applied: £" + interestAmount);
-            }
-            else
-            {
-                Console.WriteLine("No interest to apply.");
-            }
-        }
-
         public decimal GetBalance()
         {
             return balance;
