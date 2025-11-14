@@ -71,5 +71,18 @@ namespace BankAccountSystem
         {
             return balance;
         }
+
+        public decimal InterestRate
+        {
+            get { return interestRate; }
+        }
+        public void SetInterestRate(decimal newRate)
+        {
+
+        }
+        public void PayInterest(int years)
+        {
+
+        }
     }
 }
